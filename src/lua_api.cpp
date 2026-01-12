@@ -18,6 +18,7 @@ static IAgentEx* g_agentEx = nullptr;
 static bool g_comInitialized = false;
 long	lCharID;
 long	lRequestID;
+extern IAgentCharacterEx* pCharacterEx;
 
 static bool EnsureAgentServer()
 {
@@ -207,6 +208,14 @@ GMOD_MODULE_OPEN()
 
 GMOD_MODULE_CLOSE()
 {
+    // Hide agent before destroying everything
+    if (pCharacterEx)
+    {
+        long hideReq = 0;
+        pCharacterEx->Hide(TRUE, &hideReq);
+        Sleep(100);
+    }
+
     delete g_agent;
     g_agent = nullptr;
 
@@ -234,3 +243,4 @@ GMOD_MODULE_CLOSE()
 
     return 0;
 }
+
