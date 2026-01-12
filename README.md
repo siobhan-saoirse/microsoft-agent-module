@@ -17,5 +17,5 @@ Source to the Microsoft Agent includes can be found on the Internet Archive by s
 NOVA - Inspiration for this project.
 
 ## Todo List
-[x] Plan on releasing the BonziBUDDY add-on.
-[ ] Support for multiple Microsoft Agent characters
+- [x] Plan on releasing the BonziBUDDY add-on.
+- [ ] Support for multiple Microsoft Agent characters
