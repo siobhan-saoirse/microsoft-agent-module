@@ -212,8 +212,8 @@ GMOD_MODULE_CLOSE()
     if (pCharacterEx)
     {
         long hideReq = 0;
-        pCharacterEx->Hide(TRUE, &hideReq);
-        Sleep(100);
+        pCharacterEx->Hide(false, &hideReq);
+        Sleep(5000);
     }
 
     delete g_agent;
