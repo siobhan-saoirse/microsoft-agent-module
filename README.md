@@ -15,6 +15,7 @@ Source to the Microsoft Agent includes can be found on the Internet Archive by s
 
 ## Credits
 NOVA - Inspiration for this project.
+
 Microsoft, Lernout & Hauspie, Alex Parr, Bonzi Software - They created some of the bundled executable files for running in installation. I do not own these files and they belong to the rightful owner. If you would like to submit a copyright complaint, please send me one in the issues tab on this repository. Thank you.
 
 ## Todo List
