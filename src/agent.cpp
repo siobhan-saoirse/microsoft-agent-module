@@ -105,6 +105,28 @@ long AgentInstance::Speak(const std::wstring& text)
     return lRequestID;
 }
 
+long AgentInstance::Think(const std::wstring& text)
+{
+    if (!pCharacterEx)
+        return -1;
+
+    // Speak expects: BSTR bszText, BSTR bszUrl, long * plRequestID
+    // So we need to pass BSTR, not VARIANT
+
+    BSTR bszSpeak = SysAllocString(text.c_str());
+
+    _bstr_t bstrEmpty(L"");
+
+    HRESULT hr = pCharacterEx->Think(bszSpeak, &lRequestID);
+
+    SysFreeString(bszSpeak);
+
+    if (FAILED(hr))
+        return -1;
+
+    return lRequestID;
+}
+
 void AgentInstance::Play(const std::wstring& anim)
 {
     if (!pCharacterEx)

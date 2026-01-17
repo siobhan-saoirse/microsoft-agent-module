@@ -156,6 +156,14 @@ LUA_FUNCTION(magent_speak)
     return 0;
 }
 
+LUA_FUNCTION(magent_think)
+{
+    const char* text = LUA->CheckString(1);
+    if (g_agent)
+        g_agent->Think(std::wstring(text, text + strlen(text))); 
+    return 0;
+}
+
 LUA_FUNCTION(magent_play)
 {
     const char* anim = LUA->CheckString(1);

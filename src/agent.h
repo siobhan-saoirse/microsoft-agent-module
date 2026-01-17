@@ -10,6 +10,7 @@
 #include <tchar.h>
 #include "AgtSvr.h"
 
+
 class AgentInstance
 {
 public:
@@ -21,6 +22,7 @@ public:
     void Show();
     void Hide();
     long Speak(const std::wstring& text);
+    long Think(const std::wstring& text);
     void Play(const std::wstring& anim);
     void MoveTo(long x, long y);
     void GestureAt(long x, long y);
