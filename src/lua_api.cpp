@@ -205,6 +205,7 @@ GMOD_MODULE_OPEN()
     LUA->PushCFunction(magent_show);        LUA->SetField(-2, "Show");
     LUA->PushCFunction(magent_hide);        LUA->SetField(-2, "Hide");
     LUA->PushCFunction(magent_speak);       LUA->SetField(-2, "Speak");
+    LUA->PushCFunction(magent_think);       LUA->SetField(-2, "Think");
     LUA->PushCFunction(magent_play);        LUA->SetField(-2, "Play");
     LUA->PushCFunction(magent_move_to);     LUA->SetField(-2, "MoveTo");
     LUA->PushCFunction(magent_gesture_at);  LUA->SetField(-2, "GestureAt");
